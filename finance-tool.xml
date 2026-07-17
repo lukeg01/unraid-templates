@@ -16,4 +16,5 @@
   <Beta>false</Beta>
   <Config Name="Web UI Port" Target="8000" Default="8000" Mode="tcp" Description="Port for the web interface" Type="Port" Display="always" Required="true" Mask="false">8000</Config>
   <Config Name="Data" Target="/data" Default="/mnt/user/appdata/finance-tool" Mode="rw" Description="SQLite database and app settings" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/finance-tool</Config>
+  <Config Name="Redirect Base URL" Target="REDIRECT_BASE_URL" Default="" Mode="" Description="Base URL registered as the redirect URI in your enableBanking application (e.g. http://192.168.1.10:8000 or https://finance.example.com). Leave blank to auto-detect from the incoming request." Type="Variable" Display="always" Required="false" Mask="false"></Config>
 </Container>
