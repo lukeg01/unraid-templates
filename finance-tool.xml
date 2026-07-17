@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>finance-tool</Name>
+  <Repository>ghcr.io/lukeg01/finance-tool:latest</Repository>
+  <Registry>https://github.com/lukeg01/finance-tool/pkgs/container/finance-tool</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/lukeg01/finance-tool/issues</Support>
+  <Project>https://github.com/lukeg01/finance-tool</Project>
+  <Overview>Personal expense tracker. Pulls bank transactions via enableBanking, custom budget periods, categories, auto-categorize/ignore rules, burndown budget chart and finished-month analysis. All state lives in the /data volume.</Overview>
+  <Category>Tools:</Category>
+  <WebUI>http://[IP]:[PORT:8000]</WebUI>
+  <TemplateURL>false</TemplateURL>
+  <Beta>false</Beta>
+  <Config Name="Web UI Port" Target="8000" Default="8000" Mode="tcp" Description="Port for the web interface" Type="Port" Display="always" Required="true" Mask="false">8000</Config>
+  <Config Name="Data" Target="/data" Default="/mnt/user/appdata/finance-tool" Mode="rw" Description="SQLite database and app settings" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/finance-tool</Config>
+</Container>
